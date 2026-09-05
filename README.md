@@ -4,15 +4,13 @@ A modern, responsive **Video Media Player & Editor** built with HTML5, CSS3, and
 
 The project uses native browser APIs to provide media playback controls, playlist management, local video loading, basic playback-based editing, and persistent user settings without requiring a backend.
 
+## 📸 Screenshot
+
+![Video Media Player Preview](https://github.com/user-attachments/assets/5658cb54-bf34-4e0a-b60d-28d7546e2c5d)
+
 ## 🚀 Live Demo
 
 https://github.com/user-attachments/assets/164d916e-aac1-4d8c-8cb5-1a5a164c3944
-
-## 📸 Preview
-
-```md
-![Video Media Player Preview](./assets/preview.png)
-```
 
 ## ✨ Features
 
