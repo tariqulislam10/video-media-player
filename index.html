@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Video Media Player and Editor" />
+
+    <title>Video Media Player & Editor</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <!-- Header -->
+      <header class="app-header">
+        <div>
+          <h1>Video Media Player</h1>
+          <p>JavaScript Media Player & Editor</p>
+        </div>
+
+        <label class="upload-button">
+          📂 Open Video
+
+          <input
+            type="file"
+            class="video-input"
+            accept="video/*"
+            multiple
+            hidden
+          />
+        </label>
+      </header>
+
+      <section class="player-layout">
+        <!-- Video Player -->
+        <div class="player-section">
+          <div class="video-wrapper">
+            <video class="video-player" preload="metadata"></video>
+
+            <div class="video-overlay">
+              <span class="video-title"> No video selected </span>
+            </div>
+          </div>
+
+          <!-- Progress -->
+          <div class="progress-container">
+            <input
+              type="range"
+              class="progress-bar"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+
+          <!-- Time -->
+          <div class="time-display">
+            <span class="current-time"> 00:00 </span>
+
+            <span>/</span>
+
+            <span class="duration"> 00:00 </span>
+          </div>
+
+          <!-- Controls -->
+          <div class="controls">
+            <button class="control-btn previous-btn" title="Previous">
+              ⏮
+            </button>
+
+            <button class="control-btn skip-backward-btn" title="Skip backward">
+              -10
+            </button>
+
+            <button class="control-btn play-btn" title="Play/Pause">▶</button>
+
+            <button class="control-btn skip-forward-btn" title="Skip forward">
+              +10
+            </button>
+
+            <button class="control-btn next-btn" title="Next">⏭</button>
+
+            <button class="control-btn mute-btn" title="Mute">🔊</button>
+
+            <input
+              type="range"
+              class="volume-control"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+            />
+
+            <select class="speed-control">
+              <option value="0.5">0.5x</option>
+              <option value="0.75">0.75x</option>
+              <option value="1" selected>1x</option>
+              <option value="1.25">1.25x</option>
+              <option value="1.5">1.5x</option>
+              <option value="2">2x</option>
+            </select>
+
+            <button class="control-btn loop-btn" title="Loop">🔁</button>
+
+            <button class="control-btn pip-btn" title="Picture in Picture">
+              📺
+            </button>
+
+            <button class="control-btn fullscreen-btn" title="Fullscreen">
+              ⛶
+            </button>
+          </div>
+
+          <!-- Editor -->
+          <section class="editor-panel">
+            <h2>Video Editor</h2>
+
+            <div class="editor-controls">
+              <label>
+                Brightness
+
+                <input
+                  type="range"
+                  class="brightness-control"
+                  min="50"
+                  max="150"
+                  value="100"
+                />
+              </label>
+
+              <label>
+                Contrast
+
+                <input
+                  type="range"
+                  class="contrast-control"
+                  min="50"
+                  max="150"
+                  value="100"
+                />
+              </label>
+
+              <label>
+                Saturation
+
+                <input
+                  type="range"
+                  class="saturation-control"
+                  min="0"
+                  max="200"
+                  value="100"
+                />
+              </label>
+            </div>
+
+            <!-- Trim -->
+            <div class="trim-section">
+              <h3>Trim Video</h3>
+
+              <div class="trim-controls">
+                <label>
+                  Start
+
+                  <input type="number" class="trim-start" min="0" value="0" />
+                </label>
+
+                <label>
+                  End
+
+                  <input type="number" class="trim-end" min="0" value="0" />
+                </label>
+
+                <button class="apply-trim-btn">Apply Trim</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Playlist -->
+        <aside class="playlist-section">
+          <div class="playlist-header">
+            <h2>Playlist</h2>
+
+            <span class="playlist-count"> 0 videos </span>
+          </div>
+
+          <ul class="playlist"></ul>
+
+          <p class="empty-playlist">No videos added yet.</p>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
